@@ -1,0 +1,115 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+/* css 변수 생성 */
+:root {
+  --max-width: 1280px;
+  --primary-color: #669ccb;
+  --white: #fff;
+  --transition: 0.3 ease-in-out;
+  --ff-roboto: 'Roboto', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: var(--ff-roboto);
+}
+li {
+  list-style: none;
+}
+/* ------------ reset css ------------- */
+
+/* ------------ nav ------------- */
+nav {
+  width: 100%;
+  padding: 35px 15px;
+  top: 0;
+  left: 0;
+  /* nav부분을 이미지로 덮으려면 fixed를 사용해주어야 한다 */
+  position: fixed;
+}
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.nav__logo a {
+  color: var(--white);
+  font-weight: normal;
+}
+.nav_links {
+  display: flex;
+}
+.bars {
+  display: none;
+}
+ul li {
+  margin-left: 50px;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: var(--white);
+}
+/* ------------ header ------------- */
+/* vw, vh : 현재 보는 모니터 해상도에 맞춰서 보인다 */
+header {
+  background-image:linear-gradient(rgba(45,92,132,0.5), rgba(45, 92, 132, 0.3)), url(../images/bg-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+.section__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+/* 세로정렬 할때 자식요소는 1개만 있어야한다 */
+.header__content {
+  width: 50%;
+}
+.header__content h1 {
+  font-size: 70px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.header__content p {
+  font-size: 20px;
+  color: var(--white);
+  line-height: 1.3;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+.header__content button {
+  padding: 15px 30px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--white);
+  color: #f3f4f6;
+  font-size: 15px;
+  transition: .3s;
+  font-family: var(--ff-roboto);
+}
+.header__content button:hover {
+  background-color: #5681a7;
+  cursor: pointer;
+}
